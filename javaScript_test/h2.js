@@ -86,3 +86,15 @@ let h2 = (a, b, c) => {
             arr[2], year, month, day, am_pm, hours, minutes, seconds)
     }, arr[2] * 1000);
 }
+
+const readline = require("readline");
+const rl = readline.createInterface({
+    input : process.stdin,
+    output : process.stdout,
+});
+
+rl.on("line", (input) => {
+    const [a, b, c] = input.split(" ").map(Number);
+    h2(a, b, c);
+    rl.close();
+})

@@ -9,5 +9,18 @@ let e = (year, month) => {
         }
     } else {
         console.log("31");
+    }
 }
-}
+
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input : process.stdin,
+    output : process.stdout,
+});
+
+rl.on("line", (input) => {
+    const [year, month] = input.split(" ").map(Number);
+    e(year, month);
+    rl.close();
+});

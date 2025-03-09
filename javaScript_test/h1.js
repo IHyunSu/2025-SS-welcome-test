@@ -21,5 +21,16 @@ let h1 = (a, b, c) => {
     setTimeout(() => {
         console.log("시험이 종료되었습니다.");
     }, arr[2] * 1000);
-    
 }
+
+const readline = require("readline");
+const rl = readline.createInterface({
+    input : process.stdin,
+    output : process.stdout,
+});
+
+rl.on ("line", (input) => {
+    const [a, b, c] = input.split(" ").map(Number);
+    h1(a, b, c);
+    rl.close();
+});
