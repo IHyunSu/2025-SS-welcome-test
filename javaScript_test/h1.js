@@ -5,8 +5,6 @@ let h1 = (a, b, c) => {
     let arr = [a, b, c];
     arr.sort((a,b) => a - b);
 
-    console.log(arr);
-
     for (let i = 0; i < arr.length; i++) {
         let k = 0;
         for (let j = 0; j < check.length; j++) {
